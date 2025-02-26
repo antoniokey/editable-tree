@@ -11,7 +11,7 @@ const useTreeModal = ({ node }: UseTreeModalData) => {
   const [modalType, setModalType] = useState<TreeModalType | null>(null);
   const [nodeName, setNodeName] = useState<string>(node.name);
 
-  const openModal = (type: TreeModalType, initialValue = '') => {
+  const openModal = (type: TreeModalType, initialValue = node.name) => {
     setModalType(type);
     setNodeName(initialValue);
   };
